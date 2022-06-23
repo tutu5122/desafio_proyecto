@@ -1,9 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+El proyecto debe ser subido a heroku y se debe ingresar el link para la evaluación
+https://limitless-beach-03929.herokuapp.com/
 
 * Ruby version
 
