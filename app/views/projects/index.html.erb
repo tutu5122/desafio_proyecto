@@ -1,0 +1,29 @@
+<div class="container mt-5">
+   <h2>Gestor de proyecto</h2>
+   <p>Ingrese los datos</p>
+   <form action="/projects/create" id="create_projects"method="get">
+      <div class="form-group">
+         <label for="exampleFormControlInput1">Nombre</label>
+         <input type="text" class="form-control" name="name" placeholder="Nombre del proyecto">
+      </div>
+      <div class="form-group">
+         <label for="exampleFormControlTextarea1">Descripcion</label>
+         <textarea class="form-control" name="description" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+         <label for="exampleFormControlInput1">Fecha de inicio</label>
+         <input type="date" class="form-control"  name="start_date" placeholder="Fecha Inicio">
+      </div>
+      <div class="form-group">
+         <label for="exampleFormControlInput1">Fecha de termino</label>
+         <input type="date" class="form-control"  name="end_date" placeholder="Fecha termino">
+      </div>
+      <div class="form-group">
+         <label for="exampleFormControlSelect1">Estado del proyecto</label>
+         <%= select_tag :state, options_for_select(Project.states) %>
+      </div>
+      <div class="form-group">
+         <button type="submit" class="btn btn-secondary">Crear proyecto</button>
+      </div>
+   </form>
+</div>

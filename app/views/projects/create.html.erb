@@ -1,0 +1,16 @@
+<div class="container text-center mt-5">
+    <% if @project.errors.any? %>
+    <div id="error_explanation">
+        <h2><%= pluralize(@project.errors.count, "error") %> No se ha podido crear el proyecto:</h2>
+        <ul>
+            <% @project.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% else %>
+        <h2>Proyecto creado con exito</h2>
+    <% end %>
+</div>
+
+    

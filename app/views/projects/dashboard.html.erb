@@ -1,0 +1,41 @@
+<div class="container">
+    <h2 class="text-center mt-5">Filtrar proyectos por estado</h2>
+    <form class="form-inline my-2 my-lg-0 justify-content-center">
+        <select class="custom-select" name="state" id="state">
+            <option value="1">propuesta</option>
+            <option value="0">en progreso</option>
+            <option value="2">terminado</option>
+        </select>
+    <button type="submit" class="btn btn-dark btn-sm ml-3">Filtrar</button>
+    </form>     
+</div>   
+
+<br>
+   
+<div class="container">
+    <h1>Proyectos</h1>
+    
+    <table class="table mt-5">
+  <thead>
+    <tr class="h5">
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Fecha inicio</th>
+      <th scope="col">Fecha término</th>
+      <th scope="col">Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |pjt| %>
+    <tr>
+      <th scope="row"><%= pjt.id %></th>
+      <td><%= pjt.name %></td>
+      <td><%= pjt.description %></td>
+      <td><%= pjt.start_date %></td>
+      <td><%= pjt.end_date %></td>
+      <td><%= pjt.state %></td>
+    </tr>
+    <% end %>
+    </table>
+</div>
